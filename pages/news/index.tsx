@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GetStaticProps } from "next";
+import { posts } from "../../data/posts";
+import { articles } from "../../data/articles";
 import { PostBlock } from "@/components/PostBlock";
 import { getPosts, getArticles } from "@/lib/service";
 import Connect from '@/components/Connect';
@@ -9,25 +11,26 @@ import Connect from '@/components/Connect';
 import backgroundImage from '../../assets/images/community.png';
 import serviceConnect from '../../assets/images/serviceConnect.png';
 
-interface Post {
-  slug: string;
-  title: string;
-  featuredImage: { node: { sourceUrl: string; }; };
-}
+// interface Post {
+//   slug: string;
+//   title: string;
+//   featuredImage: { node: { sourceUrl: string; }; };
+// }
 
-interface Article {
-  slug: string;
-  title: string;
-  featuredImage: { node: { sourceUrl: string; }; };
-  date: string;
-}
+// interface Article {
+//   slug: string;
+//   title: string;
+//   featuredImage: { node: { sourceUrl: string; }; };
+//   date: string;
+// }
 
-interface NewsPageProps {
-  posts: Post[];
-  articles: Article[];
-}
+// interface NewsPageProps {
+//   posts: Post[];
+//   articles: Article[];
+// }
 
-const News = ({ posts, articles }: NewsPageProps) => {
+// const News = ({ posts, articles }: NewsPageProps) => {
+const News = () => {
   return (
     <div>
       <div className="gpt3__header-image" style={{ position: 'relative' }}>
@@ -113,15 +116,15 @@ const News = ({ posts, articles }: NewsPageProps) => {
 
 export default News;
 
-export const getStaticProps: GetStaticProps<NewsPageProps> = async () => {
-  const posts = await getPosts(100);
-  const articles = await getArticles(100);
+// export const getStaticProps: GetStaticProps<NewsPageProps> = async () => {
+//   const posts = await getPosts(100);
+//   const articles = await getArticles(100);
 
-  return {
-    props: {
-      posts,
-      articles,
-    },
-    revalidate: 3600,
-  };
-};
+//   return {
+//     props: {
+//       posts,
+//       articles,
+//     },
+//     revalidate: 3600,
+//   };
+// };

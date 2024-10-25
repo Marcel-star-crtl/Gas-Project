@@ -30,25 +30,26 @@ import { Single } from "@/components/Single";
 
 
 
-interface Post {
-  slug: string;
-  title: string;
-  featuredImage: { node: { sourceUrl: string; }; };
-}
+// interface Post {
+//   slug: string;
+//   title: string;
+//   featuredImage: { node: { sourceUrl: string; }; };
+// }
 
-interface Article {
-  slug: string;
-  title: string;
-  featuredImage: { node: { sourceUrl: string; }; };
-  date: string;
-}
+// interface Article {
+//   slug: string;
+//   title: string;
+//   featuredImage: { node: { sourceUrl: string; }; };
+//   date: string;
+// }
 
-interface HomePageProps {
-  posts: Post[];
-  articles: Article[];
-}
+// interface HomePageProps {
+//   posts: Post[];
+//   articles: Article[];
+// }
 
-export default function HomePage({ posts, articles }: HomePageProps) {
+// export default function HomePage({ posts, articles }: HomePageProps) {
+  export default function HomePage() {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -208,9 +209,7 @@ export default function HomePage({ posts, articles }: HomePageProps) {
               <p>{new Date(article.date).toLocaleDateString()}</p>
               <h2 className="text-xl font-bold my-2">{article.title}</h2>
               <Link href={`/articles/${article.slug}`}>
-                <button className="hover__btn-sec mt-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md">
-                  Read More
-                </button>
+                <button className="hover__btn-sec mt-2 text-black px-6 border border-black rounded-md" style={{fontSize: "12px"}}>Read More</button>
               </Link>
             </div>
           ))}
@@ -235,16 +234,20 @@ export default function HomePage({ posts, articles }: HomePageProps) {
             <PostBlock key={post.slug} post={post} />
           ))}
         </div> */}
-        {/* <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
+        <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
           {posts.map((post) => (
             <PostBlock key={post.slug} post={post} />
           ))}
-        </div> */}
-        <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
-          {(posts || []).map((post) => (
-            <PostBlock key={post.slug} post={post} />
-          ))}
         </div>
+        {/* <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
+          {(posts || []).map((post) => (
+            <PostBlock
+              key={post.slug}
+              post={post as Post | Article} // Ensure that post is of the correct type
+            />
+          ))}
+
+        </div> */}
 
         <div className="flex items-center justify-end mt-4" style={{ padding: "1rem 0 2rem 0" }}>
           <Link href="/postall">

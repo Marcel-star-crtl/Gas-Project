@@ -6,7 +6,7 @@ export const posts: Post[] = [
       slug: "first-press-release",
       title: "Company Announces New Product Launch",
       content: "<p>We are excited to announce the launch of our newest product line...</p>",
-      featuredImage: "/images/product-launch.jpg",
+      featuredImage: "images/contact.png",
       date: "2024-01-15"
     },
     {

@@ -78,16 +78,21 @@ interface PostBlockProps {
   post: Post | Article;
 }
 
+
 export const PostBlock: React.FC<PostBlockProps> = ({ post }) => {
+  const isArticle = (post: Post | Article): post is Article => {
+    return (post as Article).date !== undefined;
+  };
+
   return (
     <div className="bg-white rounded-lg border border-black p-4">
       <p className="font-bold">Press Release</p>
-      <p>{new Date(post.date).toLocaleDateString()}</p>
+      {isArticle(post) ? (
+        <p>{new Date(post.date).toLocaleDateString()}</p>
+      ) : null}
       <h2 className="text-xl font-bold my-2">{post.title}</h2>
       <Link href={`/posts/${post.slug}`}>
-        <button className="hover__btn-sec mt-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md">
-          Read More
-        </button>
+        <button className="hover__btn-sec mt-2 text-black px-6 border border-black rounded-md" style={{fontSize: "12px"}}>Read More</button>
       </Link>
     </div>
   );

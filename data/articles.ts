@@ -6,7 +6,7 @@ export const articles: Article[] = [
       slug: "industry-analysis",
       title: "2024 Industry Trends Analysis",
       content: "<p>The industry has seen significant shifts in the past year...</p>",
-      featuredImage: "/images/trends.jpg",
+      featuredImage: "assets/images/contact.png",
       date: "2024-01-10",
       tags: ["industry", "analysis", "trends"]
     },
