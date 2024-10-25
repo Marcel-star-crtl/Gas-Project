@@ -1,66 +1,53 @@
-// // types.ts
+// //types.ts
 // export interface Post {
-//     content: string;
-//     featuredImage: {
-//       node: {
-//         sourceUrl: string;
-//       };
+//   content: string;
+//   featuredImage: {
+//     node: {
+//       sourceUrl: string;
 //     };
-//     slug: string;
-//     title: string;
+//   };
+//   slug: string;
+//   title: string;
+//   tags: {
+//     nodes: {
+//       name: string;
+//     }[];
+//   };
 // }
-  
-// // export interface Article {
-// //     content: string;
-// //     featuredImage: {
-// //         node: {
-// //             sourceUrl: string;
-// //         };
-// //     };
-// //     slug: string;
-// //     title: string;
-// // }
-  
 
 // export interface Article {
-//     date: string;
-//     content: string;
-//     slug: string;
-//     title: string;
+//   featuredImage: {
+//     node: {
+//       sourceUrl: string;
+//     };
+//   };
+//   date: string;
+//   title: string;
+//   slug: string;
+//   content: string;
+//   tags: {
+//     nodes: { name: string }[];
+//   };
 // }
 
 
 
 
 
-//types.ts
+// types.ts
 export interface Post {
-  content: string;
-  featuredImage: {
-    node: {
-      sourceUrl: string;
-    };
-  };
   slug: string;
   title: string;
-  tags: {
-    nodes: {
-      name: string;
-    }[];
-  };
+  content: string;
+  featuredImage: string;
+  date: string;
 }
 
 export interface Article {
-  featuredImage: {
-    node: {
-      sourceUrl: string;
-    };
-  };
-  date: string;
-  title: string;
   slug: string;
+  title: string;
   content: string;
-  tags: {
-    nodes: { name: string }[];
-  };
+  featuredImage: string;
+  date: string;
+  tags: string[];
 }
