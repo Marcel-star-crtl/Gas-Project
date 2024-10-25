@@ -1,4 +1,6 @@
 // data/articles.ts
+import { Article } from '../lib/types';
+
 export const articles: Article[] = [
     {
       slug: "industry-analysis",

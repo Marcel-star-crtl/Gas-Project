@@ -1,4 +1,6 @@
 // data/posts.ts
+import { Post } from '../lib/types';
+
 export const posts: Post[] = [
     {
       slug: "first-press-release",

@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import { Hero } from "@/components/Hero";
-import { posts } from "@/data/posts";
-import { articles } from "@/data/articles";
+import { posts } from "../data/posts";
+import { articles } from "../data/articles";
 import { PostBlock } from "@/components/PostBlock";
 // import { getPosts, getArticles } from "@/lib/service";
 import { News } from "@/components/News";
@@ -202,9 +202,9 @@ export default function HomePage({ posts, articles }: HomePageProps) {
           ))}
         </div> */}
         <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(articles || []).slice(0, 4).map((article) => (
+          {articles?.slice(0, 4).map((article) => (
             <div key={article.slug} className="bg-white rounded-lg border border-black p-4">
-              <p className="font-bold">Press Release</p>
+              <p className='font-bold'>Press Release</p>
               <p>{new Date(article.date).toLocaleDateString()}</p>
               <h2 className="text-xl font-bold my-2">{article.title}</h2>
               <Link href={`/articles/${article.slug}`}>
