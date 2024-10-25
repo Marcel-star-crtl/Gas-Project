@@ -9,7 +9,7 @@ import { Single } from "@/components/Single";
 
 import about from '../../assets/images/about.png';
 import Employee from '../../assets/images/employee.png';
-import john from '../../assets/images/John.png';
+import john from '../../assets/images/John.PNG';
 import Connect from '@/components/Connect';
 import team1 from '../../assets/images/team1.png';
 import team4 from '../../assets/images/team4.png';

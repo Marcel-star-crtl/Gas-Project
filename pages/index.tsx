@@ -16,8 +16,8 @@ import Link from 'next/link';
 
 const smokeVideoUrl = '/assets/images/smoke.mp4';
 import play from '../assets/images/play.png'
-import Quality from '../assets/images/Quality.png';
-import Customer from '../assets/images/Customer.png';
+import Quality from '../assets/images/Quality.PNG';
+import Customer from '../assets/images/Customer.PNG';
 import Experience from '../assets/images/Experience.png';
 import Environtment from "@/components/Environment";
 import backgroundImageUrl from '../assets/images/Douala.jpg';
