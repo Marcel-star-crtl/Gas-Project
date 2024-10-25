@@ -8,9 +8,9 @@ import ServiceDetails2 from "@/components/ServiceDetails2";
 import Connect from '@/components/Connect';
 
 import Employee from '../../assets/images/employee.png';
-import Quality from '../../assets/images/Quality.png';
-import Customer from '../../assets/images/Customer.png';
-import Experience from '../../assets/images/Experience.png';
+import Quality from '../../assets/images/Quality.jpg';
+import Customer from '../../assets/images/Customer.jpg';
+import Experience from '../../assets/images/Experience.jpg';
 import service1 from '../../assets/images/services1.png';
 import service2 from '../../assets/images/services2.png';
 import service3 from '../../assets/images/services3.png';
